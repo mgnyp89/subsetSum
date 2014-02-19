@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="subsum.js"></script>
+<script src="helper.js"></script>
+<script src="head.js"></script>
+<link rel="stylesheet" type="text/css" href="subsum2.css">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>Subset</title>
+</head>
+<body>
+<div id="container">
+<div id='num'>
+</div>
+<br>
+<div id="leftPool">
+<span id="leftSubSum"></span>
+</div>
+<div id="rightPool">
+<span id="rightSubSum"></span>
+</div>
+<br>
+<div><p id="result">Current difference: </p></div>
+<br>
+<span id="leftCounter"></span>
+<span id="rightCounter"></span>
+<span id="realDifference"></span>
+<div id="buttons">
+<button id="resetButton" onclick="reset()">Reset</button>
+<button id="submitButton" onclick="submitResults()">Submit</button>
+</div>
+<div id="form" class="stylized" style="display:none">
+<table id="studentForm">
+    <tr>
+        <td>
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" style="height:24px; width:295px;"/>      
+        </td>
+        <td>
+			<label for="year">Year</label>
+			<select class="custom-select" name="year" id="year">
+					<option>2013</option>
+					<option>2012</option>
+					<option>2011</option>
+					<option>2010</option>
+					<option>2009</option>
+					<option>2008</option>
+					<option>other</option>
+        </select> 
+		</td>
+    </tr>
+    <tr>
+        <td>
+			<label for="county">County</label> 
+        <select class="custom-select" name="county" id="county" onchange="showSchools(this)">
+					
+        </select>
+        </td>
+        <td>
+			<label for="email">E-mail</label> 
+			<input type="text" name="email" id="email" style="height:24px; width:295px;"/>
+		</td>
+    </tr>
+    <tr>
+		<td>
+			<label for="school">School</label> 
+        <select class="custom-select" name="school" id="school">
+        </select>
+		</td>
+	</tr>
+  </table>
+<br>
+<div class="stylized" id="form_buttons">
+    <button type="button" onclick="submitData()">Submit</button>
+    <button type="button" onclick="closeForm()">Cancel</button>
+</div>
+</div>
+</div>
+</body>
+</html> 
